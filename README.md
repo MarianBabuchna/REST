@@ -63,12 +63,25 @@ Implement REST service which provides following endpoint:
 * _The records are stored on disk as a text file and separated by new line (\n)._
  
 
+## PROJECT hierarchy:
+
+--REST  
+&nbsp; &nbsp;--PROJECT  
+&nbsp; &nbsp; &nbsp; &nbsp;--Flask_script.py  
+&nbsp; &nbsp; &nbsp; &nbsp;--record_func.py  
+&nbsp; &nbsp; &nbsp; &nbsp;--record_obj.py  
+&nbsp; &nbsp;--TESTS  
+&nbsp; &nbsp; &nbsp; &nbsp;--test_DELETE.py  
+&nbsp; &nbsp; &nbsp; &nbsp;--test_GET.py  
+&nbsp; &nbsp; &nbsp; &nbsp;--test_PATCH.py  
+&nbsp; &nbsp; &nbsp; &nbsp;--test_POST.py  
+&nbsp; &nbsp;--stored_records.json  
 
  
 ## TEST:
 
 **A:Test GET method**  
-For testing "GET" method serve function "test_get()" in class TestREST:  
+For testing "GET" method serve test "test_GET.py" stored in "TESTS":  
 Before unit test execution copy following record to "stored_records.json" file.  
 ```    
 {"recordId": "c2bd3384-5a66-4a28-a8bf-9eda7ca26583", "info": {"recordStatus": "NEW", "created": "2019-05-14T19:52:37.715824+02:00", "updated": "", "deleted": "", "recordData": ""}}
@@ -78,7 +91,7 @@ If records are equal test PASSED._
   
 
 **B:Test DELETE method**   
-For testing "DELETE" method serve function "test_delete()" in class TestREST:  
+For testing "DELETE" method serve test "test_DELETE.py" stored in "TESTS":  
 Before unit test execution copy following record to "stored_records.json" file.
 ```
 {"recordId": "a2bd3384-5a66-4a28-a8bf-9eda7ca26583", "info": {"recordStatus": "NEW", "created": "2019-05-14T19:52:37.715824+02:00", "updated": "", "deleted": "", "recordData": ""}}
@@ -93,7 +106,7 @@ Result: _If all conditions are accomplished, test PASSED._
   
 
 **C:Test PATCH method**  
-For testing "PATCH" method serve function "test_patch()" in class TestREST:  
+For testing "PATCH" method serve test "test_PATCH.py" stored in "TESTS":  
 Before unit test execution copy following record to "stored_records.json" file.  
 ``` 
 {"recordId": "b2bd3384-5a66-4a28-a8bf-9eda7ca26583", "info": {"recordStatus": "NEW", "created": "2019-05-14T19:52:37.715824+02:00", "updated": "", "deleted": "", "recordData": ""}}
@@ -108,7 +121,7 @@ Result: _If all conditions are accomplished, test PASSED._
  
  
 **D:Test POST method**  
-For testing "POST" method serve function "test_post()" in class TestREST:  
+For testing "POST" method serve test "test_POST()" stored in "TESTS":  
 Following record type with "actual time" will be created in "stored_records.json" file.  
 ```
 {"recordId": "d2bd3384-5a66-4a28-a8bf-9eda7ca26583", "info": {"recordStatus": "NEW", "created": "2019-05-15T16:55:16.059913+02:00", "updated": "", "deleted": "", "recordData": ""}}
