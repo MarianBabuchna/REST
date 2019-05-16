@@ -76,6 +76,8 @@ Implement REST service which provides following endpoint:
 &nbsp; &nbsp; &nbsp; &nbsp;--test_PATCH.py  
 &nbsp; &nbsp; &nbsp; &nbsp;--test_POST.py  
 &nbsp; &nbsp;--stored_records.json  
+&nbsp; &nbsp;--README.md   
+
 
  
 ## TEST:
